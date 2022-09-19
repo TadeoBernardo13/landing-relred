@@ -1,0 +1,1178 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    background-color: var(--white);
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+:root
+{
+    --white: rgb(255, 255, 255);
+    --red: rgb(155, 16, 16);
+    --shadow-color: rgba(10, 12, 56, 0.63);
+    --shadow-color-gray: rgb(230, 230, 230);
+    --gray: rgb(242, 242, 242);
+    --gray2: rgb(77, 77, 77);
+    --gray3: rgb(102, 102, 102);
+    --gray4: rgb(232, 232, 232);
+    --gray5: rgb(204, 204, 204);
+}
+
+.header .navbar
+{
+    width: 100vw;
+    height: 6vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    background-color: var(--white);
+    box-shadow: 0px 8px 14px -3px var(--shadow-color);
+    -webkit-box-shadow: 0px 8px 14px -3px var(--shadow-color);
+    -moz-box-shadow: 0px 8px 14px -3px var(--shadow-color);
+}
+
+.header .navbar .cont-logo
+{
+    margin-left: 2em;
+}
+
+.header .navbar .cont-logo img
+{
+    height: 4vh;
+}
+
+.menu-links
+{
+    height: 100%;
+    width: 100%;
+    transition: transform .5s;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.menu-item
+{
+    list-style: none;
+    position: relative;
+    height: 100%;
+}
+
+.menu-link span
+{
+    position: relative;
+    z-index: 1;
+}
+
+.menu-link::before
+{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background-color: var(--red);
+    transition: height 0.1s;
+}
+
+.menu-link:hover::before
+{
+   height: 10%;
+}
+
+.menu-link 
+{
+    color: black;
+    text-decoration: none;
+    padding: 0 30px;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    position: relative;
+}
+
+.menu-hamburguer
+{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    cursor: pointer;
+    display: none;
+}
+
+.menu-hamburguer .fa
+{
+    display: block;
+    font-size: 2em;
+}
+
+/* SECOND NAVBAR SECTION ===================================================================================================== */
+.nd-navbar
+{
+    width: 100vw;
+    height: 6vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    background-color: var(--red);
+    box-shadow: 0px 8px 14px -3px var(--shadow-color);
+    -webkit-box-shadow: 0px 8px 14px -3px var(--shadow-color);
+    -moz-box-shadow: 0px 8px 14px -3px var(--shadow-color);
+}
+
+.second-navbar .nd-navbar .cont-logo
+{
+    margin-left: 2em;
+}
+
+.second-navbar .nd-navbar .cont-logo img
+{
+    height: 4vh;
+}
+
+.second-navbar .nd-navbar .nd-menu-links
+{
+    height: 100%;
+    width: 100%;
+    transition: transform .5s;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.second-navbar .nd-navbar .nd-menu-item
+{
+    list-style: none;
+    position: relative;
+    height: 100%;
+}
+
+.second-navbar .nd-navbar .nd-menu-link span
+{
+    position: relative;
+}
+
+.second-navbar .nd-navbar .nd-menu-link::before
+{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background-color: var(--white);
+    transition: height 0.1s;
+}
+
+.second-navbar .nd-navbar .nd-menu-link:hover::before
+{
+   height: 10%;
+}
+
+.second-navbar .nd-navbar .nd-menu-link 
+{
+    color: var(--white);
+    text-decoration: none;
+    padding: 0 30px;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    position: relative;
+}
+
+.second-navbar .nd-navbar .nd-menu-links::before
+{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background-color: var(--white);
+    transition: height 0.2s;
+}
+
+.second-navbar .nd-navbar .nd-menu-links .active::before
+{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    background-color: var(--white);
+    transition: height 0.2s;
+}
+
+/* PROVISIONAL CAROUSEL ===================================================================================================== */
+.equipment
+{
+    width: 100%;
+    height: 80vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+}
+
+.carrousel
+{
+    width: 100%;
+    max-width: 800px;
+    height: 100%;
+    max-height: 600px;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type=radio]
+{
+    display: none;
+}
+.carrousel .cards
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+}
+
+.carrousel .cards .card
+{
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+}
+
+.carrousel .cards .card img
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+#item-2:checked ~ .cards #selector-1,
+#item-1:checked ~ .cards #selector-3,
+#item-3:checked ~ .cards #selector-2
+{
+    transform: translateX(-60%) scale(0.8);
+    z-index: 0;
+}
+
+#item-3:checked ~ .cards #selector-1,
+#item-1:checked ~ .cards #selector-2,
+#item-2:checked ~ .cards #selector-3
+{
+    transform: translateX(60%) scale(0.8);
+    z-index: 0;
+}
+
+#item-1:checked ~ .cards #selector-1,
+#item-2:checked ~ .cards #selector-2,
+#item-3:checked ~ .cards #selector-3
+{
+    transform: translateX(0) scale(0.8);
+    z-index: 1;
+}
+
+/* SECTION PRODUCTS ========================================================================================================== */
+.products
+{
+    background-color: var(--white);
+    height: auto;
+}
+
+.products .totems
+{
+    display: none;
+}
+.products .totems.activeView
+{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+
+.products .racks
+{
+    display: none;
+}
+.products .racks.activeView
+{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+
+.products .expend
+{
+    display: none;   
+}
+.products .expend.activeView
+{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+
+.products .gadgets
+{
+    display: none;    
+}
+.products .gadgets.activeView
+{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+
+.products .bandas
+{
+    display: none;   
+}
+.products .bandas.activeView
+{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+
+.products .activeView
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    padding-top: 10px;
+}
+
+/* BTNS GROUP SECTION: BTS "CONOCE MAS" ==========================================================================================================*/
+.products .activeView .btns-group
+{
+    width: 100%;
+    max-height: 100%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.products .activeView .btns-group .menu-btns
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.products .activeView .btns-group .menu-btns .model
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 500px;
+    height: 450px;
+    margin: 0% 1%;
+    transition: 0.5s;
+}
+
+.products .activeView .btns-group .menu-btns .model img
+{
+    width: 50%;
+}
+
+.products .activeView .btns-group .menu-btns .model a
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background-color: var(--gray5);
+    font-size: 1.5em;
+    color: var(--white);
+    width: 45%;
+    height: 14%;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.products .activeView .btns-group .menu-btns .model:hover
+{
+    background-color: var(--gray);
+}
+.products .activeView .btns-group .menu-btns .model:hover .btn-a
+{
+    background-color: var(--red);
+    color: var(--white);
+    box-shadow: 0px -7px 17px -4px var(--shadow-color);
+    -webkit-box-shadow: 0px -7px 17px -4px var(--shadow-color);
+    -moz-box-shadow: 0px -7px 17px -4px var(--shadow-color);
+}
+.products .activeView .btns-group .menu-btns .model.active
+{
+    background-color: var(--gray);
+}
+.products .activeView .btns-group .menu-btns .model.active .btn-a
+{
+    background-color: var(--red);
+    color: var(--white);
+    box-shadow: 0px -7px 17px -4px var(--shadow-color);
+    -webkit-box-shadow: 0px -7px 17px -4px var(--shadow-color);
+    -moz-box-shadow: 0px -7px 17px -4px var(--shadow-color);
+}
+
+/* CONTENEDOR DE LOS MODELOS ==========================================================================================================*/
+.products .activeView .container
+{
+    display: none;
+}
+
+.products .activeView .container-activeView
+{
+    display: block;
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    overflow-y: hidden;
+    height: auto;
+    transition: 0.5s;
+}
+
+.products .activeView .container-activeView h2
+{
+    text-align: center;
+    color: var(--gray2);
+}
+
+.products .activeView .container-activeView .images
+{
+    max-width: 100vw;
+    width: 100%;
+    margin: 5% auto 0%;
+    display: flex;
+    justify-content: center;
+}
+.products .activeView .container-activeView .images img
+{
+    width: 20%;
+    margin: 15px;
+}
+
+.products .activeView .container-activeView .caracteristicas-container
+{
+    margin-top: 5%;
+    display: flex;
+    padding: 3% 6%;
+    background-color: var(--gray);
+}
+.products .activeView .container-activeView .caracteristicas-container img
+{
+    width: 40%;
+}
+.products .activeView .container-activeView .caracteristicas-container .caracteristicas
+{
+    width: 50%;
+    margin-left: 10%;
+}
+.products .activeView .container-activeView .caracteristicas-container .caracteristicas .tittle
+{
+    font-size: 5em;
+    color: var(--gray2);
+}
+.products .activeView .container-activeView .caracteristicas-container .caracteristicas .container-graphs
+{
+    margin-top: 5%;
+    display: flex;
+    width: 100%;
+}
+.products .activeView .container-activeView .caracteristicas-container .caracteristicas .container-graphs .graph img
+{
+    width: 50%;
+}
+.products .activeView .container-activeView .caracteristicas-container .caracteristicas .modelo
+{
+    margin-top: 5%;
+}
+.products .activeView .container-activeView .caracteristicas-container .caracteristicas .modelo span
+{
+    font-size: 2em;
+    color: var(--gray2);
+}
+.products .activeView .container-activeView .caracteristicas-container .caracteristicas .modelo .kind-model
+{
+    width: 40%;
+    background-color: var(--gray5);
+    padding: 1%;
+}
+
+
+.products .activeView .container-activeView .funciones-container
+{
+    display: flex;
+    padding: 3% 6%;
+    background-color: var(--gray);
+}
+.products .activeView .container-activeView .funciones-container img
+{
+    width: 40%;
+}
+.products .activeView .container-activeView .funciones-container .funciones
+{
+    width: 50%;
+    margin-left: 10%;
+}
+.products .activeView .container-activeView .funciones-container .funciones .tittle
+{
+    font-size: 5em;
+    color: var(--gray2);
+}
+.products .activeView .container-activeView .funciones-container .funciones .container-graphs
+{
+    margin-top: 5%;
+    display: flex;
+    width: 100%;
+}
+.products .activeView .container-activeView .funciones-container .funciones .container-graphs .graph img
+{
+    width: 50%;
+}
+.products .activeView .container-activeView .funciones-container .funciones .precios
+{
+    margin-top: 5%;
+}
+.products .activeView .container-activeView .funciones-container .funciones .precios span
+{
+    font-size: 2em;
+    color: var(--gray2);
+}
+.products .activeView .container-activeView .funciones-container .funciones .precios .price
+{
+    width: 40%;
+    background-color: var(--gray5);
+    padding: 1%;
+}
+
+.products .activeView .container-activeView .example-one
+{
+    display: flex;
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.products .activeView .container-activeView .example-one .image-one
+{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    padding: 8%;
+}
+.products .activeView .container-activeView .example-one .image-one h1
+{
+    font-size: 5em;
+    color: var(--gray3);
+}
+.products .activeView .container-activeView .example-one .image-one span
+{
+    font-size: 2em;
+    color: var(--gray3);
+}
+.products .activeView .container-activeView .example-one .image-one::before
+{
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 70%;
+    height: 100%;
+    opacity: 0.6;
+    background-image: url('../ASSESTS/placeholder.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.products .activeView .container-activeView .example-one .image-two
+{
+    width: 30%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    padding: 5%;
+}
+.products .activeView .container-activeView .example-one .image-two span
+{
+    font-size: 2em;
+    color: var(--gray3);
+}
+.products .activeView .container-activeView .example-one .image-two::before
+{
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 70%;
+    top: 0;
+    width: 30%;
+    height: 100%;
+    opacity: 0.6;
+    background-image: url('../ASSESTS/placeholder.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.products .activeView .container-activeView .example-two
+{
+    display: flex;
+    width: 100%;
+    height: 50vh;
+    position: relative;
+}
+
+.products .activeView .container-activeView .example-two .image-one
+{
+    width: 30%;
+}
+.products .activeView .container-activeView .example-two .image-one::before
+{
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30%;
+    height: 100%;
+    opacity: 0.6;
+    background-image: url('../ASSESTS/placeholder.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.products .activeView .container-activeView .example-two .image-two
+{
+    width: 70%;
+}
+.products .activeView .container-activeView .example-two .image-two
+{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    padding: 8%;
+}
+.products .activeView .container-activeView .example-two .image-two h1
+{
+    font-size: 5em;
+    color: var(--gray3);
+}
+.products .activeView .container-activeView .example-two .image-two span
+{
+    font-size: 2em;
+    color: var(--gray3);
+}
+
+.products .activeView .container-activeView .example-two .image-two::before
+{
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 30%;
+    top: 0;
+    width: 70%;
+    height: 100%;
+    opacity: 0.6;
+    background-image: url('../ASSESTS/placeholder.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* SECTION FOOTER ========================================================================================================== */
+.footer
+{
+    padding: 1% 0% 0% 0%;
+    background-color: var(--white);
+}
+
+.footer .footer-content
+{
+    background-color: var(--gray5);
+    padding: 3% 0% 0% 0%;
+}
+
+.footer .footer-content .footer-quick-access
+{
+    display: flex;
+    margin-bottom: 8%;
+}
+
+.footer .footer-content .footer-quick-access ul
+{
+    margin-left: 10%;
+    list-style: none;
+}
+
+.footer .footer-content .footer-quick-access ul .tittle
+{
+    color: var(--gray3);
+    font-size: 0.8em;
+}
+
+.footer .footer-content .footer-quick-access ul .item
+{
+    margin-bottom: 10px;
+}
+
+.footer .footer-content .footer-quick-access ul .item a
+{
+    text-decoration: none;
+    color: var(--white);
+    font-size: 1.2em;
+}
+
+.footer .footer-content .footer-policies
+{
+    display: flex;
+    align-items: center;
+    background-color: var(--white);
+    padding-left: 10%;
+}
+
+.footer .footer-content .footer-policies ul
+{
+    display: flex;
+    list-style: none;
+    width: 100%;
+}
+
+.footer .footer-content .footer-policies li
+{
+    margin: 1% 2% 1% 0%;
+}
+
+.footer .footer-content .footer-policies li a
+{
+    text-decoration: none;
+    color: var(--gray3);
+    font-size: 1.3em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:800px)
+{
+    .menu-hamburguer
+    {
+        display: flex;
+    }
+    
+    .menu-link--active
+    {
+        --transform: rotate(0);
+        --background: rbg(138, 37, 38);
+    }
+
+    .menu-item--show
+    {
+        background-color: var(--background);
+    }
+
+    .menu-links
+    {
+        position: fixed;
+        max-width: 400px;
+        width: 100%;
+        top: 6vh;
+        bottom: 0;
+        right: 0;
+        background-color: var(--white);
+        overflow-y: auto;
+        display: grid;
+        grid-auto-rows: max-content;
+        transform: translate(100%);
+    }
+
+    .menu-links--show
+    {
+        transform: unset;
+        width: 100%;
+    }
+
+    .menu-item
+    {
+        width: 100%;
+        --clip:0;
+        overflow: hidden;
+    }
+
+    .menu-link
+    {
+        padding: 25px 0;
+        padding-left: 30px;
+        height: auto;
+    }
+
+    .menu-nesting
+    {
+        display: grid;
+        position: unset;
+        width: 100%;
+        transform: translateY(0);
+        height: 0;
+        transition: height .3s;
+    }
+
+    .menu-link--inside
+    {
+        width: 90%;
+        margin-left: auto;
+        border-left: 1px solid var(--red);
+    }
+
+/* SECTION PRODUCTS ========================================================================================================== */
+    .products .btn img
+    {
+        width: 90%;    
+    }
+}
+
+@media (max-width:400px)
+{
+    .menu-hamburguer
+    {
+        display: flex;
+    }
+    
+    .menu-link--active
+    {
+        --transform: rotate(0);
+        --background: rbg(138, 37, 38);
+    }
+
+    .menu-item--show
+    {
+        background-color: var(--background);
+    }
+
+    .menu-links
+    {
+        position: fixed;
+        max-width: 200px;
+        width: 100%;
+        top: 6vh;
+        bottom: 0;
+        right: 0;
+        background-color: var(--white);
+        overflow-y: auto;
+        display: grid;
+        grid-auto-rows: max-content;
+        transform: translate(100%);
+    }
+
+    .menu-links--show
+    {
+        transform: unset;
+        width: 100%;
+    }
+
+    .menu-item
+    {
+        width: 100%;
+        --clip:0;
+        overflow: hidden;
+    }
+
+    .menu-link
+    {
+        padding: 25px 0;
+        padding-left: 30px;
+        height: auto;
+    }
+
+    .menu-nesting
+    {
+        display: grid;
+        position: unset;
+        width: 100%;
+        transform: translateY(0);
+        height: 0;
+        transition: height .3s;
+    }
+
+    .menu-link--inside
+    {
+        width: 90%;
+        margin-left: auto;
+        border-left: 1px solid var(--red);
+    }
+
+    /* SECOND NAVBAR SECTION ===================================================================================================== */
+    .nd-navbar
+    {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        background-color: var(--white);
+    }
+
+    .second-navbar .nd-navbar .nd-menu-links
+    {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 5px;
+        height: 100%;
+        width: 100%;
+        transition: transform .5s;
+    }
+
+    .second-navbar .nd-navbar .nd-menu-item
+    {
+        width: 120px;
+    }
+
+    .second-navbar .nd-navbar .nd-menu-link::before
+    {
+        background-color: var(--red);
+    }
+
+    .second-navbar .nd-navbar .nd-menu-link 
+    {
+        color: black;
+        padding: 0;
+        height: 100%;
+        background-color: var(--white);
+    }
+
+    /* SECTION PRODUCTS ========================================================================================================== */
+    .products
+    {
+        height: auto;
+    }
+
+    /* BTNS GROUP SECTION: BTS "CONOCE MAS" =======================================================================================*/
+    .products .activeView .btns-group
+    {
+        margin-top: 30px;
+    }
+
+    .products .activeView .btns-group .menu-btns .model
+    {
+        width: 500px;
+        height: 250px;
+        margin: 0% 1%;
+        transition: 0.5s;
+    }
+
+    .products .activeView .btns-group .menu-btns .model img
+    {
+        width: 100%;
+    }
+
+    .products .activeView .btns-group .menu-btns .model a
+    {
+        font-size: 1em;
+        text-align: center;
+        color: var(--white);
+        width: 60%;
+        height: 20%;
+    }
+
+    /* CONTENEDOR DE LOS MODELOS ==========================================================================================================*/
+    .products .activeView .container-activeView h2
+    {
+        text-align: center;
+    }
+    .products .activeView .container-activeView .caracteristicas-container .caracteristicas .tittle
+    {
+        font-size: 1.3em;
+        color: var(--gray2);
+    }
+    .products .activeView .container-activeView .caracteristicas-container .caracteristicas .modelo span
+    {
+        font-size: 1em;
+        color: var(--gray2);
+    }
+
+
+    .products .activeView .container-activeView .funciones-container .funciones .tittle
+    {
+        font-size: 1.3em;
+        color: var(--gray2);
+    }
+    .products .activeView .container-activeView .funciones-container .funciones .precios span
+    {
+        font-size: 1em;
+        color: var(--gray2);
+    }
+    .products .activeView .container-activeView .funciones-container .funciones .precios .price
+    {
+        width: 40%;
+        background-color: var(--gray5);
+        padding: 1%;
+    }
+
+    .products .activeView .container-activeView .example-one
+    {
+        display: flex;
+        width: 100%;
+        height: 40vh;
+        position: relative;
+    }
+
+    .products .activeView .container-activeView .example-one .image-one
+    {
+        width: 50%;
+        padding: 5%;
+    }
+    .products .activeView .container-activeView .example-one .image-one h1
+    {
+        font-size: 1.3em;
+    }
+    .products .activeView .container-activeView .example-one .image-one span
+    {
+        font-size: 0.8em;
+        color: var(--gray3);
+    }
+    .products .activeView .container-activeView .example-one .image-one::before
+    {
+        width: 50%;
+        height: 50%;
+    }
+
+    .products .activeView .container-activeView .example-one .image-two
+    {
+        display: block;
+        width: 50%;
+        text-align: center;
+        padding: 5%;
+    }
+    .products .activeView .container-activeView .example-one .image-two span
+    {
+        font-size: 0.8em;
+        color: var(--gray3);
+    }
+    .products .activeView .container-activeView .example-one .image-two::before
+    {
+        left: 50%;
+        top: 0;
+        width: 50%;
+        height: 50%;
+    }
+
+    .products .activeView .container-activeView .example-two
+    {
+        display: flex;
+        width: 100%;
+        height: 170px;
+        position: relative;
+    }
+
+    .products .activeView .container-activeView .example-two .image-one
+    {
+        width: 50%;
+    }
+    .products .activeView .container-activeView .example-two .image-one::before
+    {
+        width: 50%;
+    }
+
+    .products .activeView .container-activeView .example-two .image-two
+    {
+        width: 50%;
+    }
+    .products .activeView .container-activeView .example-two .image-two
+    {
+        width: 50%;
+        padding: 5%;
+    }
+    .products .activeView .container-activeView .example-two .image-two h1
+    {
+        font-size: 1.3em;
+    }
+    .products .activeView .container-activeView .example-two .image-two span
+    {
+        font-size: 0.8em;
+        color: var(--gray3);
+    }
+
+    .products .activeView .container-activeView .example-two .image-two::before
+    {
+        left: 50%;
+        width: 50%;
+    }
+
+    /*SECTION FOOTER ========================================================================== */
+    .footer
+    {
+        height: auto;
+    }
+
+    .footer .footer-content .footer-quick-access ul .tittle
+    {
+        font-size: 0.4em;
+    }
+
+    .footer .footer-content .footer-quick-access ul .item a
+    {
+        font-size: 0.6em;
+    }
+
+    .footer .footer-content .footer-policies li a
+    {
+        font-size: 0.6em;
+    }
+}
