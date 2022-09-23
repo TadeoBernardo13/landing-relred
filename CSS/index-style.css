@@ -144,6 +144,9 @@ body
 
 .products .btn
 {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
     background-color: var(--gray);
     border-radius: 5px;
     width: 15%;
@@ -152,6 +155,7 @@ body
 
 .products .btn a
 {
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -159,6 +163,81 @@ body
     text-decoration: none;
     color: var(--gray2);
     transition: 0.5s;
+}
+
+.products .btn-totem
+{
+    width: 100px;
+    height: 100px;
+    background: url(/ASSESTS/icons/ICONOS\ CABECERA_TOTEM.png) no-repeat;
+    background-size: cover;
+    transition: 0.5s;
+}
+
+.products .btn:hover .btn-totem
+{
+    background: url(/ASSESTS/icons/ICONOS\ CABECERA_TOTEM\ RELLENO.png) no-repeat;
+    background-size: cover;
+}
+
+.products .btn-racks
+{
+    width: 100px;
+    height: 100px;
+    background: url(/ASSESTS/icons/ICONOS\ CABECERA_RACKS.png) no-repeat;
+    background-size: cover;
+    transition: 0.5s;
+}
+
+.products .btn:hover .btn-racks
+{
+    background: url(/ASSESTS/icons/ICONOS\ CABECERA_RACKS\ RELLENO.png) no-repeat;
+    background-size: cover;
+}
+
+.products .btn-expend
+{
+    width: 100px;
+    height: 100px;
+    background: url(/ASSESTS/icons/ICONOS\ CABECERA_EXPENDEDORAS.png) no-repeat;
+    background-size: cover;
+    transition: 0.5s;
+}
+
+.products .btn:hover .btn-expend
+{
+    background: url(/ASSESTS/icons/ICONOS\ CABECERA_EXPENDEDORAS\ RELLENO.png) no-repeat;
+    background-size: cover;
+}
+
+.products .btn-gadgets
+{
+    width: 100px;
+    height: 100px;
+    background: url(/ASSESTS/icons/ICONOS\ CABECERA_GADGETS.png) no-repeat;
+    background-size: cover;
+    transition: 0.5s;
+}
+
+.products .btn:hover .btn-gadgets
+{
+    background: url(/ASSESTS/icons/ICONOS\ CABECERA_GADGETS\ RELLENO.png) no-repeat;
+    background-size: cover;
+}
+
+.products .btn-bandas
+{
+    width: 100px;
+    height: 100px;
+    background: url(/ASSESTS/icons/ICONOS\ CABECERA_BANDAS.png) no-repeat;
+    background-size: cover;
+    transition: 0.5s;
+}
+
+.products .btn:hover .btn-bandas
+{
+    background: url(/ASSESTS/icons/ICONOS\ CABECERA_BANDAS\ RELLENO.png) no-repeat;
+    background-size: cover;
 }
 
 .products .btn:hover .btn-a
@@ -366,6 +445,81 @@ body
 .systems .grid-systems .sys img
 {
     width: 40%;
+}
+
+.systems .grid-systems .sys .affix
+{
+    width: 60%;
+    height: 60%;
+    background:url(/ASSESTS/systems/LOGOS\ SISTEMAS_AFFIX\ COLOR.png) no-repeat;
+    background-size: cover;
+    transition: 0.5s;
+}
+
+.systems .grid-systems .sys:hover .affix
+{
+    background:url(/ASSESTS/systems/LOGOS\ SISTEMAS_AFFIX.png) no-repeat;
+    background-size: cover;
+}
+
+.systems .grid-systems .sys .xmart
+{
+    width: 60%;
+    height: 60%;
+    background:url(/ASSESTS/systems/LOGOS\ SISTEMAS_ID\ XMART\ COLOR.png) no-repeat;
+    background-size: cover;
+    transition: 0.5s;
+}
+
+.systems .grid-systems .sys:hover .xmart
+{
+    background:url(/ASSESTS/systems/LOGOS\ SISTEMAS_ID\ XMART.png) no-repeat;
+    background-size: cover;
+}
+
+.systems .grid-systems .sys .lead-net
+{
+    width: 60%;
+    height: 60%;
+    background:url(/ASSESTS/systems/LOGOS\ SISTEMAS_LEAD\ NET\ COLOR.png) no-repeat;
+    background-size: cover;
+    transition: 0.5s;
+}
+
+.systems .grid-systems .sys:hover .lead-net
+{
+    background:url(/ASSESTS/systems/LOGOS\ SISTEMAS_LEAD\ NET.png) no-repeat;
+    background-size: cover;
+}
+
+.systems .grid-systems .sys .nodo-cero
+{
+    width: 60%;
+    height: 60%;
+    background:url(/ASSESTS/systems/LOGOS\ SISTEMAS_NODO\ CERO\ COLOR.png) no-repeat;
+    background-size: cover;
+    transition: 0.5s;
+}
+
+.systems .grid-systems .sys:hover .nodo-cero
+{
+    background:url(/ASSESTS/systems/LOGOS\ SISTEMAS_NODO\ CERO.png) no-repeat;
+    background-size: cover;
+}
+
+.systems .grid-systems .sys .soldix
+{
+    width: 60%;
+    height: 60%;
+    background:url(/ASSESTS/systems/LOGOS\ SISTEMAS_SOLDIX\ COLOR.png) no-repeat;
+    background-size: cover;
+    transition: 0.5s;
+}
+
+.systems .grid-systems .sys:hover .soldix
+{
+    background:url(/ASSESTS/systems/LOGOS\ SISTEMAS_SOLDIX.png) no-repeat;
+    background-size: cover;
 }
 
 .systems .grid-systems .sys:hover
@@ -762,7 +916,7 @@ body
     }
 }
 
-@media (max-width:400px)
+@media (max-width:600px)
 {
     .menu-hamburguer
     {
@@ -852,6 +1006,7 @@ body
     .products .btn
     {
         width: 20%;
+        height: 25%;
     }
 
     .products .btn a
@@ -859,9 +1014,30 @@ body
         font-size: 0.6em;
     }
 
-    .products .btn img
+    .products .btn-totem
     {
-        width: 70%;    
+        width: 50px;
+        height: 50px;
+    }
+    .products .btn-racks
+    {
+        width: 50px;
+        height: 50px;
+    }
+    .products .btn-expend
+    {
+        width: 50px;
+        height: 50px;
+    }
+    .products .btn-gadgets
+    {
+        width: 50px;
+        height: 50px;
+    }
+    .products .btn-bandas
+    {
+        width: 50px;
+        height: 50px;
     }
 
     /* SECTION MOST SOLD AND PRODUCTS ========================================================================================================== */
